@@ -19,8 +19,3 @@ export const appRoutes: Route[] = [
     pathMatch: 'full'
   }
 ];
-
-// to create .github/workflows/publish.yml:
-// sudo touch .github/workflows/publish.yml
-// or if the .github or .github/workflows folder is not in the root of the project:
-
