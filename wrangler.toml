@@ -1,5 +1,0 @@
-name = "doc-reader-container"
-pages_build_output_dir = "./dist/apps/doc-reader-container"  # ניתן לשנות לפי הצורך
-
-[build]
-command = "npm i --force && npm run build:host-all"
