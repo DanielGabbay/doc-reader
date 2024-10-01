@@ -1,6 +1,5 @@
-name = "doc-reader"
-type = "javascript"  # או "webpack" אם אתה משתמש ב-webpack
-compatibility_date = "2023-10-01"
+name = "doc-reader-container"
+pages_build_output_dir = "./dist/apps/doc-reader-container"  # ניתן לשנות לפי הצורך
 
 [build]
-command = "npm install --legacy-peer-deps && npm run build"  # ניתן לשנות לפי הצורך
+command = "npm i --force && npm run build:host-all"
