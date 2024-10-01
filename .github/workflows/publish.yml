@@ -1,0 +1,33 @@
+on: [ push ]
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      deployments: write
+    name: Publish to Cloudflare Pages
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      # Run a build step here if your project requires
+
+      - name: Cloudflare Pages GitHub Action
+        uses: cloudflare/pages-action@v1.5.0
+
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: bad53feeb50f4c80634f56db79cc2ea5
+          projectName: YOUR_PROJECT_NAME
+          directory: YOUR_ASSET_DIRECTORY
+          # Optional: Enable this if you want to have GitHub Deployments triggered
+          gitHubToken: ${{ secrets.GITHUB_TOKEN }}
+          # Optional: Switch what branch you are publishing to.
+          # By default this will be the branch which triggered this workflow
+          branch: main
+          # Optional: Change the working directory
+        workingDirectory: dist/apps/doc-reader-container
+        # Optional: Change the Wrangler version, allows you to point to a specific version or a tag such as `beta`
+        wranglerVersion: '3'
+
