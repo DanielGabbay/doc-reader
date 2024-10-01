@@ -4,7 +4,7 @@
   "license": "MIT",
   "scripts": {
     "serve-all": "nx serve doc-reader-container --devRemotes=doc-reader-app",
-    "build:host-all": "npm i --force && nx run-many --target=build --projects=doc-reader-app,doc-reader-container",
+    "build": "npm i --force && nx run-many --target=build --projects=doc-reader-app,doc-reader-container",
     "build:all": "nx run-many --target=build --projects=doc-reader-app,doc-reader-container",
     "build:all:prod": "nx run-many --target=build --configuration=production --projects=doc-reader-app,doc-reader-container",
     "build:container": "nx run doc-reader-container:build",
