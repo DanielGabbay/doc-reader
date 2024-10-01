@@ -1,0 +1,6 @@
+name = "doc-reader"
+type = "javascript"  # או "webpack" אם אתה משתמש ב-webpack
+compatibility_date = "2023-10-01"
+
+[build]
+command = "npm install --legacy-peer-deps && npm run build"  # ניתן לשנות לפי הצורך
