@@ -3,7 +3,13 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
-    "serve-all": "nx serve doc-reader-container --devRemotes=doc-reader-app"
+    "serve-all": "nx serve doc-reader-container --devRemotes=doc-reader-app",
+    "build:all": "nx run-many --target=build --projects=doc-reader-app,doc-reader-container",
+    "build:all:prod": "nx run-many --target=build --configuration=production --projects=doc-reader-app,doc-reader-container",
+    "build:container": "nx run doc-reader-container:build",
+    "build:container:prod": "nx run doc-reader-container:build --configuration=production",
+    "build:app": "nx run doc-reader-app:build",
+    "build:app:prod": "nx run doc-reader-app:build --configuration=production"
   },
   "private": true,
   "devDependencies": {

@@ -6,6 +6,11 @@ import { NxWelcomeComponent } from './nx-welcome.component';
   standalone: true,
   imports: [CommonModule, NxWelcomeComponent],
   selector: 'dr-doc-reader-app-entry',
-  template: `<dr-nx-welcome></dr-nx-welcome>`,
+  template: `
+    <div>AppHost: {{ appHost }}</div>
+    <dr-nx-welcome></dr-nx-welcome>`,
 })
-export class RemoteEntryComponent {}
+export class RemoteEntryComponent {
+  protected readonly appHost = window.location.origin;
+
+}
