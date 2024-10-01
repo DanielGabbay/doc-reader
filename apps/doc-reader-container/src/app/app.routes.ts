@@ -2,8 +2,12 @@ import { NxWelcomeComponent } from './nx-welcome.component';
 import { Route } from '@angular/router';
 
 export const appRoutes: Route[] = [
+  // {
+  //   path: 'login',
+
+  // }
   {
-    path: 'doc-reader-app',
+    path: 'app',
     loadChildren: () =>
       import('doc-reader-app/Routes').then((m) => m.remoteRoutes),
   },

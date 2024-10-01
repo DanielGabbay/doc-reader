@@ -13,7 +13,7 @@
         "outputPath": "dist/apps/doc-reader-container",
         "index": "apps/doc-reader-container/src/index.html",
         "main": "apps/doc-reader-container/src/main.ts",
-        "polyfills": ["zone.js"],
+        "polyfills": [],
         "tsConfig": "apps/doc-reader-container/tsconfig.app.json",
         "inlineStyleLanguage": "scss",
         "assets": [
